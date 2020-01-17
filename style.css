@@ -15,7 +15,7 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgb(75, 73, 112);
+    background: #323651;
     text-align: center;
     padding: 2.5rem 0;
     border-radius: 7px;
@@ -67,7 +67,7 @@ button {
     margin: 20px 0;
     color: white;
     border-radius: 50px;
-    background: red;
+    background: linear-gradient(to left,#ed52ad,#7e60da);
     padding: 9px 30px;
     font-size: .95rem;
 }
