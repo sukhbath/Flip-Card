@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(75, 73, 112);
+    text-align: center;
+    padding: 2.5rem 0;
+    border-radius: 7px;
+    color: white;
+    /* width: ; */
+}
+
+img {
+    height: 150px;
+    border-radius: 50%;
+}
+
+
+.name {
+    margin: 10px auto;
+    width: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: .5px;
+}
+
+.name::after {
+    content: 'SENIOR PRODUCT DESIGNER';
+    color: rgb(226, 226, 226);
+    display: block;
+    font-size: .65rem;
+    width: 100%;
+    font-weight: normal;
+
+
+}
+
+.disc {
+    width: 60%;
+    margin: auto;
+    font-size: .85rem;
+    color: rgb(243, 243, 243);
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.hire {
+    margin: 20px 0;
+    color: white;
+    border-radius: 50px;
+    background: red;
+    padding: 9px 30px;
+    font-size: .95rem;
+}
+
+
+
+#allbuttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    position: relative;
+}
+#allbuttons::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 90%;
+    height: .5px;
+    background: rgba(236, 236, 236, 0.623);
+    transform: translate(-50%,0);
+    
+}
+#allbuttons > div{
+    display: block;
+}
+#allbuttons > div> p{
+    margin: 5px 0;
+    position: relative;
+}
+#allbuttons > div> p::after{
+    content: 'Followers';
+    display: block;
+    font-size: .9rem;
+    position: absolute;
+    font-weight: normal;
+    top: 80%;
+    left: 0;
+    color: rgb(231, 231, 231);
+
+}
+
+#allbuttons >div >div {
+    font-size: 2.2rem;
+    color: white;
+    background: red;
+    border-radius: 50%;
+    height: 3.5rem;
+    width: 3.5rem;
+    text-align: center;
+    line-height: 3.5rem;
+}
