@@ -1,0 +1,1 @@
+click on each side of card to see different sides of card

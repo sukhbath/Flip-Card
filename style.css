@@ -168,8 +168,13 @@ button {
     padding: 9px 30px;
     font-size: .95rem;
     cursor: pointer;
+    transform: scale(1);
+    transition: .4s transform;
 }
+.hire:hover{
+    transform: scale(.95);
 
+}
 
 
 #allbuttons {
