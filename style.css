@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 * {
     padding: 0;
@@ -7,43 +7,140 @@
 }
 
 html {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-#card {
+body {
+    background: rgb(224, 224, 224);
+}
+
+main {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #323651;
     text-align: center;
-    padding: 2.5rem 0;
-    border-radius: 7px;
     color: white;
-    /* width: ; */
+    perspective:500px ;
+    /* background-color: red; */
+    width: 25vw;
 }
 
-img {
-    height: 150px;
+.front {
+    padding: 2.5rem 0;
+    border-radius: 7px;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transform: rotatey(0deg) ;
+    background: #323651;
+    transition: .6s transform;
+}
+
+.front-rotate{
+    transform: rotatey(180deg);
+}
+
+
+.back {
+    position: absolute;
+    top: 0;
+    background: white;
+    border-radius: 7px;
+    color: black;
+    height: 100%;
+    width: 100%;
+    background: #323651;
+    overflow: hidden;
+    transform: rotateY(180deg);
+    z-index: -1;
+    backface-visibility: hidden;
+    transition: .6s transform;
+
+}
+
+.back-rotate{
+    transform: rotatey(360deg);
+}
+
+.front .image {
+    width: 150px;
+    margin: auto;
+    position: relative;
+}
+
+.front img {
+    width: 100%;
+    border-radius: 50%;
+    position: relative;
+
+}
+
+.back img{
+    width: 100%;
+}
+
+.back a{
+    background: green;
+    display: block;
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+    width: 80%;
+    margin: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 20px auto;
+    transform: translatey(0px);
+    cursor: pointer;
+    transition: .2s transform;
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.123);
+}
+.back a i{
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+.back a:hover{
+    transform: translatey(2px);
+}
+
+
+
+.image::after {
+    content: '\2714';
+    position: absolute;
+    display: block;
+    top: 70%;
+    right: 5%;
+    transform: translate(50%, -50%);
+    background: linear-gradient(to left, #ed52ad, #7e60da);
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
     border-radius: 50%;
 }
 
-
 .name {
-    margin: 10px auto;
+    margin: 10px auto 25px;
     width: 50%;
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
     letter-spacing: .5px;
+    position: relative;
 }
 
 .name::after {
     content: 'SENIOR PRODUCT DESIGNER';
-    color: rgb(226, 226, 226);
+    color: rgb(212, 212, 212);
     display: block;
     font-size: .65rem;
+    top: 110%;
     width: 100%;
+    position: absolute;
     font-weight: normal;
 
 
@@ -53,7 +150,7 @@ img {
     width: 60%;
     margin: auto;
     font-size: .85rem;
-    color: rgb(243, 243, 243);
+    color: rgb(235, 235, 235);
 }
 
 button {
@@ -67,9 +164,10 @@ button {
     margin: 20px 0;
     color: white;
     border-radius: 50px;
-    background: linear-gradient(to left,#ed52ad,#7e60da);
+    background: linear-gradient(to left, #ed52ad, #7e60da);
     padding: 9px 30px;
     font-size: .95rem;
+    cursor: pointer;
 }
 
 
@@ -80,7 +178,8 @@ button {
     padding: 20px;
     position: relative;
 }
-#allbuttons::before{
+
+#allbuttons::before {
     content: '';
     position: absolute;
     top: 0;
@@ -88,32 +187,35 @@ button {
     width: 90%;
     height: .5px;
     background: rgba(236, 236, 236, 0.623);
-    transform: translate(-50%,0);
-    
+    transform: translate(-50%, 0);
+
 }
-#allbuttons > div{
+
+#allbuttons>div {
     display: block;
     cursor: pointer;
 }
-#allbuttons > div> p{
+
+#allbuttons>div>p {
     margin: 5px 0;
     position: relative;
 }
-#allbuttons > div> p::after{
+
+#allbuttons>div>p::after {
     content: 'Followers';
     display: block;
-    font-size: .7rem;
+    font-size: .65rem;
     position: absolute;
     font-weight: normal;
     width: 100%;
-    top: 80%;
+    top: 100%;
     left: 0;
     text-align: center;
-    color: rgb(231, 231, 231);
+    color: rgb(202, 202, 202);
 
 }
 
-#allbuttons >div >div {
+#allbuttons>div>div {
     font-size: 2.2rem;
     color: white;
     border-radius: 50%;
@@ -122,15 +224,17 @@ button {
     text-align: center;
     line-height: 3.5rem;
 }
+
 .button1 {
-    background-color: #b1257e;
+    background: linear-gradient(to right, #b1257e, #ff50bf);
 }
 
 .button2 {
-    background-color: #0062f4;
+    background: linear-gradient(to right, #0062f4, #569aff);
 }
 
 .button3 {
-    background-color: #634ee7;
+    background: linear-gradient(to right, #634ee7, #8471ff);
 }
+
 
