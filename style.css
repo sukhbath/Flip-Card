@@ -22,8 +22,8 @@ main {
     text-align: center;
     color: white;
     perspective:500px ;
-    /* background-color: red; */
     width: 25vw;
+   
 }
 
 .front {
